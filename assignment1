@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hemish-Portfolio</title>
+    <style>
+        h2{
+            border-bottom: 1px solid;
+            
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+        }
 
+    </style>
+</head>
+<body>
+   <header>
+    <h1><center>Hemish.P</center></h1>
+    </header>
+    
+    <section>
+        <h2>About Me</h2>
+        
+        <p>Passionate cybersecurity enthusiast with a strong interest in ethical hacking and securing digital systems. Eager
+            to apply my skills and curiosity in a challenging role<br> to protect networks while advancing my expertise in
+            cybersecurity.</p>
+    </section>
+
+
+    <section>
+        <h2>Skills</h2>
+        
+        <ul><b><u>Programming Languages</u></b>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+        </ul>
+
+        <ul><b><u>Soft Skills</u></b>
+            <li>Critical Thinking</li>
+            <li>Time Managment</li>
+            <li>Problem Solving</li>
+        </ul>
+
+        <ul><b><u>Dev Tools</u></b>
+            <li>Vs code</li>
+            <li>Turbo C</li>
+            <li>Intellij idea</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        
+        <div>
+            <h3>1. The Perfect Guess</h3>
+            <p>”The Perfect Guess” is a Python project developed using the Tkinter module, where
+                users attempt to guess a randomly generated number within a specified range. <br>The game provides feedback on
+                each guess, guiding players towards the correct answer.</p>
+        </div>
+
+        <div>
+            <h3>2. Password Generator</h3>
+            <p>. - ”Password Generator” is a Python project built with Tkinter that allows users to
+                generate secure, random passwords based on customizable criteria such as length and character types. <br>The tool
+                enhances security by creating strong passwords for various applications</p>
+        </div>
+
+        <div>
+            <h3>3. Snake,Water and Gun game</h3>
+            <p>”Snake, Water, and Gun” is a Python project that simulates the
+                classic game with a twist, where players choose between Snake, Water, or Gun to compete against the computer.
+                <br>The game implements random choices and determines the winner based on predefined rules between the three
+                options.</p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Contact Information</h2>
+    
+        <div>
+            <a href="mailto:hemish1978@gmail.com"> 💌 hemish1978@gmail.com</a>
+            </div>
+
+        
+        <div>
+            <a href="https://www.linkedin.com/in/hemish-p-633500209"> 𝐢𝐧 hemish-p</a>
+        </div>
+
+
+
+    </section>
+    <br>
+</body>
+</html>
