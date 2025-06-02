@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .container{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            height: 1000px;
+            max-width: 500px;
+            position: relative;
+            left: 500px;
+        }
+        h1{
+            justify-self: center;
+        }
+        #fname{
+            color:grey;
+            font-size: large;
+        }
+        .name-input {
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid lightgrey;
+        }
+        .name{
+            display: flex;
+            gap: 20px;
+        }
+        .name-container {
+            flex: 1;
+        }
+        #fname2{
+            color:grey;
+            font-size: large;
+        }
+        #mail{
+            color:grey;
+            font-size: large;
+            position: relative;
+            top: 50px;
+        }
+        #email{
+            border-radius: 5px;
+            width: 90%;
+            position: relative;
+            top: 60px;
+            padding: 12px;
+            border: 2px solid lightgrey;
+        }
+        #passs{
+            color:grey;
+            font-size: large;
+            position: relative;
+            top:79px;
+        }
+        #password{
+            position: relative;
+            top:90px;
+            padding: 12px;
+            border: 2px solid lightgrey;
+            border-radius: 4px;
+            width: 90%;
+        }
+        #cpasss{
+            color:grey;
+            font-size: large;
+            position: relative;
+            top:100px;
+        }
+        #cpassword{
+            position: relative;
+            top:110px;
+            padding: 12px;
+            border: 2px solid lightgrey;
+            border-radius: 4px;
+            width: 90%;
+        }
+        #dob{
+            color:grey;
+            font-size: large;
+            position: relative;
+            top:120px;
+        }
+        #datte{
+            position: relative;
+            top:130px;
+            padding: 12px;
+            border: 2px solid lightgrey;
+            border-radius: 4px;
+            width: 90%;
+            color:grey
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+            position: relative;
+            top:150px;
+            color: gray;
+        }
+        #gen{
+            position: relative;
+            top:150px;
+            color: gray;
+        }
+        #ch{
+            position: relative;
+            top:200px
+        }
+        #terms{
+            position: relative;
+            top:200px;
+            color: grey;
+        }
+        #submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            top:210px
+        }
+        #submit-btn:hover {
+            background-color: #3a7bc8;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+    <div class="container">
+        <h1>Create Your Account</h1>
+        <div class="prename">
+            <div class="name">
+                <div class="name-container">
+                    <label id="fname">Firstname</label><br>
+                    <input type="text" id="fname1" class="name-input" required>
+                    <span class="error-message" id="fname-error"></span>
+                </div>
+                <div class="name-container">
+                    <label id="fname2">Lastname</label><br>
+                    <input type="text" id="lname1" class="name-input" required>
+                    <span class="error-message" id="lname-error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="premail">
+            <label id="mail">Email Address</label>
+            <input type="email" id="email" required> 
+            <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div id="pass">
+            <label id="passs">Password</label>
+            <input type="password" id="password" required>
+            <span class="error-message" id="password-error"></span>
+
+            <label id="cpasss">Confirm Password</label>
+            <input type="password" id="cpassword" required>
+            <span class="error-message" id="cpassword-error"></span>
+        </div>
+
+        <div id="date">
+            <label id="dob">Date of birth</label>
+            <input type="date" id="datte" required>
+            <span class="error-message" id="dob-error"></span>
+        </div>
+
+        <div>
+            <label id="gen">Gender</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" checked> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say
+                    </label>
+                </div>
+        </div>
+
+        <div>
+            <input type="checkbox" required id="ch">
+            <label id="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+            <span class="error-message" id="terms-error"></span>
+        </div>
+
+        <button type="submit" id="submit-btn">Register</button>
+    </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('cpassword');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let isValid = true;
+                
+                // Validate first name
+                const firstName = document.getElementById('fname1');
+                if (firstName.value.trim() === '') {
+                    showError('fname-error', 'First name is required');
+                    isValid = false;
+                } else {
+                    hideError('fname-error');
+                }
+                
+                // Validate last name
+                const lastName = document.getElementById('lname1');
+                if (lastName.value.trim() === '') {
+                    showError('lname-error', 'Last name is required');
+                    isValid = false;
+                } else {
+                    hideError('lname-error');
+                }
+                
+                // Validate email
+                const email = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    showError('email-error', 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError('email-error');
+                }
+                
+                // Validate password
+                if (passwordInput.value.length < 8) {
+                    showError('password-error', 'Password must be at least 8 characters');
+                    isValid = false;
+                } else {
+                    hideError('password-error');
+                }
+                
+                // Validate password confirmation
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    showError('cpassword-error', 'Passwords do not match');
+                    isValid = false;
+                } else {
+                    hideError('cpassword-error');
+                }
+                
+                // Validate date of birth
+                const dob = document.getElementById('datte');
+                if (!dob.value) {
+                    showError('dob-error', 'Date of birth is required');
+                    isValid = false;
+                } else {
+                    hideError('dob-error');
+                }
+                
+                // Validate terms checkbox
+                const terms = document.getElementById('ch');
+                if (!terms.checked) {
+                    showError('terms-error', 'You must accept the terms and conditions');
+                    isValid = false;
+                } else {
+                    hideError('terms-error');
+                }
+                
+                if (isValid) {
+                    alert('Registration successful!');
+                    form.reset();
+                }
+            });
+            
+            function showError(id, message) {
+                const errorElement = document.getElementById(id);
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+            
+            function hideError(id) {
+                const errorElement = document.getElementById(id);
+                errorElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
